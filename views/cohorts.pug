@@ -1,8 +1,7 @@
 html
   head
-    link(rel= 'stylesheets' href= 'sytling.css')
+    link(rel="stylesheet" type="text/css" href="/css/style.css")
   body
-    div.cohorts
+    div.cohorts_container
       each cohort in cohorts
-        form(method='GET' action=`cohorts/${cohort}`)
-          button.btn.btn-secondary(type='submit') #{cohort}
+        a(class='cohort_link' href=`cohorts/${cohort}`) #{cohort}
