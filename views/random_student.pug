@@ -1,8 +1,10 @@
 html
   head
+    link(rel="stylesheet" type="text/css" href="/css/style.css")
     title= title
   body
-    message= random_student
+    div.center
+      message= random_student
 
-    form(method='GET' action= action)
-      button.btn.btn-secondary(type='submit') Pick again
+      form(method='GET' action= action)
+        button.btn.btn-secondary(type='submit') Pick again
