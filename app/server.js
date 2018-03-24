@@ -16,15 +16,7 @@ app.get('/cohorts/:cohort', function(req, res){
   var students         = YAML.load('students.yml')
   var cohort_selection = req.params.cohort
   var cohort           = students[cohort_selection]
-  var random_student   = cohort[random_index(cohort)]
-  var action           = `/cohorts/${cohort_selection}`
-
-  res.render('random_student', { title: 'Pick a student', random_student: random_student, action: action })
+  res.render('random_student', { title: 'Pick a student', cohort: cohort })
 })
-
-function random_index(cohort) {
-  // shuffle and then pick from the start
-  return Math.floor(Math.random() * cohort.length)
-}
 
 app.listen(3000)

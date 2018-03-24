@@ -1,10 +1,11 @@
 html
   head
     link(rel="stylesheet" type="text/css" href="/css/style.css")
+    script(src='/javascripts/random_student.js')
     title= title
   body
     div.center
-      message= random_student
-
-      form(method='GET' action= action)
-        button.btn.btn-secondary(type='submit') Pick again
+      button.btn.btn-secondary(type='submit', id='pick_a_student') Pick a student
+      ul
+        each student in cohort
+          li(id=`${student.replace(/ /g, '')}`)= student

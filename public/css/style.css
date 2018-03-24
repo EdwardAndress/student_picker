@@ -8,3 +8,12 @@
     padding: 10px;
     text-align: center;
 }
+
+li {
+  list-style: none;
+}
+
+#picked {
+  color: green;
+  font-size: 1.5em;
+}
